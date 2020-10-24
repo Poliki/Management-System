@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.meetingdemo.mapper.MessageMapper">
+    <select id="queryByName" resultType="com.example.meetingdemo.pojo.Message" parameterType="com.example.meetingdemo.pojo.Message">
+
+
+    select * from message where mName like concat('%',#{mName},'%') and uId=#{uId}
+
+</select>
+</mapper>
